@@ -31,7 +31,7 @@ $(document).ready(function()
             });
         });
 
-        $('showBooks').prop("disabled", true);
+        $('#showBooks').prop("disabled", true);
     });
 
     var totalSum = 0;
