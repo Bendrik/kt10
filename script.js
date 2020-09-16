@@ -34,6 +34,25 @@ $(document).ready(function()
         $('showBooks').prop("disabled", true);
     });
 
+    var totalSum = 0;
 
+    $('#listOfBooks').on('click', 'button', function(mittEvent2)
+    {
+        $('#cartImg').fadeOut(2000);
+
+        var bookId = mittEvent2.target.id;
+        var bookTitle = $(this).parent().siblings(".title").text();
+        var bookPrice = $(this).parent().siblings(".price").text();
+
+        var cart = '<tr><td>' + bookTitle + '</td><td>' + bookPrice + '</td></tr>';
+        $('#cart').append($(cart));
+
+        totalSum = Number(totalSum) + Number(bookPrice);
+        totalSum = Math.round(totalSum);
+
+        $('#totalSum').empty().append(totalSum);
+
+        $('#cartImg').fadeIn(2000);
+    });
 
 });
