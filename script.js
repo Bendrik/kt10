@@ -30,6 +30,8 @@ $(document).ready(function()
                 $('#listOfBooks').append($(html));
             });
         });
+
+        $('showBooks').prop("disabled", true);
     });
 
 
